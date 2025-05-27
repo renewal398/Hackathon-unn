@@ -1,0 +1,450 @@
+/* Dashboard.css - Fixed Version */
+
+/* Base Styles */
+:root {
+      --primary-color: linear-gradient(135deg, #000000, #095026);
+    --secondary-color: linear-gradient(135deg, #000000, #095026);
+    --accent-color: #8BC34A;
+    --dark-color: linear-gradient(120deg, #a8e063, #56ab2f);
+  --text-color: #333;
+  --light-text: #666;
+  --background-color: #f5f5f5;
+  --card-bg: linear-gradient(135deg, #000000, #095026);
+  --border-color: #e0e0e0;
+  --badge-color: #000000;
+  --duration-color: #757575;
+  --sidebar-width: 250px; /* Define sidebar width */
+}
+
+/* Global reset */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.dashboard-container {
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  background-color: var(--background-color);
+}
+
+.content {
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Header */
+.dashboard-header {
+  margin-bottom: 2rem;
+}
+
+.dashboard-header h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.subtitle {
+  color: var(--light-text);
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Dashboard Grid - Improved for large screens */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  gap: 1rem;
+  width: 100%;
+}
+
+/* Large screen optimization */
+@media (min-width: 1200px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .content {
+    padding: 3rem;
+  }
+  
+  .dashboard-header h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+  }
+  
+  .content {
+    padding: 4rem;
+  }
+}
+
+/* Card Styles */
+.dashboard-card {
+  background: linear-gradient(135deg, #000000, #095026);;
+  border-radius: 12px;
+  color: #ffffff;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  border: 1px solid var(--border-color);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: fit-content;
+  border: 3px solid rgb(89, 206, 118);
+}
+
+.dashboard-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: white;
+  font-weight: 600;
+}
+
+.card-subtitle {
+  color: rgb(243, 243, 243);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+/* Learning Progress Section */
+.progress-section {
+  margin-top: 1.5rem;
+}
+
+.progress-section h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.progress-container {
+  width: 100%;
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 6px;
+  margin-bottom: 0.8rem;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(135deg, #285f2b, #095026);
+  border-radius: 6px;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  font-size: 0.9rem;
+  color: var(--light-text);
+}
+
+/* Quick Actions Section */
+.actions-list {
+  list-style: none;
+  margin: 1.5rem 0 0 0;
+  padding: 0;
+}
+
+.actions-list li {
+  margin-bottom: 1rem;
+}
+
+.action-button {
+  width: 100%;
+  padding: 1rem;
+  background: rgb(240, 254, 255);
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.action-button:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-1px);
+}
+
+/* Continue Learning Section */
+.lesson-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  border: 1px solid var(--border-color);
+}
+
+.lesson-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.lesson-card p {
+  font-size: 0.95rem;
+  color: var(--light-text);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.lesson-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.badge {
+  font-size: 0.75rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge.new {
+  background-color: var(--badge-color);
+  color: white;
+}
+
+.duration {
+  font-size: 0.85rem;
+  color: var(--duration-color);
+  font-weight: 500;
+}
+
+.start-button {
+  margin-left: auto;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.start-button:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Recent Activity Section */
+.activity-item {
+  margin-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.activity-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.activity-item h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.activity-times {
+  list-style: none;
+  font-size: 0.85rem;
+  color: var(--light-text);
+  margin: 0;
+  padding: 0;
+}
+
+.activity-times li {
+  margin-bottom: 0.4rem;
+  line-height: 1.4;
+}
+
+/* Achievement Section */
+.achievement-card {
+  background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  border: 1px solid var(--accent-color);
+}
+
+.achievement-card h3 {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.achievement-card p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  color: var(--text-color);
+}
+
+.achievement-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.points {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.view-button {
+  padding: 0.5rem 1rem;
+  background-color: white;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.view-button:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Community Section */
+.community-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.stat-item h3 {
+  font-size: 0.85rem;
+  color: var(--light-text);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.stat-value {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .main-content {
+    margin-left: 200px; /* Smaller sidebar on medium screens */
+  }
+  
+  :root {
+    --sidebar-width: 200px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .main-content {
+    margin-left: 0; /* No sidebar on tablets */
+  }
+  
+  .dashboard-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .community-stats {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .content {
+    padding: 1rem;
+    padding-top: 5rem; /* Account for mobile navbar */
+  }
+  
+  .dashboard-header h1 {
+    font-size: 2rem;
+  }
+  
+  .dashboard-card {
+    padding: 1.5rem;
+  }
+  
+  .lesson-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .start-button {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+  
+  .achievement-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding: 0.5rem;
+    padding-top: 4.5rem;
+  }
+  
+  .dashboard-card {
+    padding: 1rem;
+  }
+}

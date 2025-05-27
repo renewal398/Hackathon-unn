@@ -1,0 +1,84 @@
+.nft-badge {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+  }
+  
+  .nft-badge:hover {
+    transform: translateY(-5px);
+  }
+  
+  .badge-image {
+    position: relative;
+    height: 200px;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .badge-image img {
+    max-width: 80%;
+    max-height: 80%;
+  }
+  
+  .rarity-tag {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  .nft-badge.common .rarity-tag {
+    background-color: #e0e0e0;
+    color: #424242;
+  }
+  
+  .nft-badge.rare .rarity-tag {
+    background-color: #bbdefb;
+    color: #0d47a1;
+  }
+  
+  .nft-badge.epic .rarity-tag {
+    background-color: #e1bee7;
+    color: #4a148c;
+  }
+  
+  .nft-badge.legendary .rarity-tag {
+    background-color: #ffecb3;
+    color: #ff6f00;
+  }
+  
+  .badge-info {
+    padding: 1.5rem;
+  }
+  
+  .badge-info h3 {
+    margin: 0 0 0.5rem 0;
+    color: #333;
+  }
+  
+  .badge-info p {
+    margin: 0 0 1rem 0;
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  .earned-date {
+    font-size: 0.8rem;
+    color: #4CAF50;
+    font-weight: 500;
+  }
+  
+  .not-earned {
+    font-size: 0.8rem;
+    color: #f44336;
+    font-weight: 500;
+  }

@@ -1,0 +1,82 @@
+/* src/assets/styles/main.css */
+:root {
+    --primary-color: linear-gradient(135deg, #000000, #095026);
+    --secondary-color: linear-gradient(135deg, #000000, #095026);
+    --accent-color: #8BC34A;
+    --dark-color: linear-gradient(120deg, #a8e063, #56ab2f);
+    --light-color: #C8E6C9;
+    --text-color: #333;
+    --text-light: #fff;
+    --background-color: #f9f9f9;
+    --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+  }
+  
+  /* Auth styles */
+  .auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
+  }
+  
+  .auth-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .quiz-option {
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .quiz-option:hover {
+    background-color: var(--light-color);
+  }
+  
+  .quiz-option.selected {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+  }
+  
+  /* NFT Badge styles */
+  .nft-badge {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .nft-badge:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Loading animation */
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  .loading-leaf {
+    animation: spin 2s linear infinite;
+    width: 50px;
+    height: 50px;
+  }

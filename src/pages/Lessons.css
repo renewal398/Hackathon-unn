@@ -1,0 +1,28 @@
+.lessons-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .lessons-container h1 {
+    color: #2E7D32;
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtitle {
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+  }
+  
+  .lessons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .lessons-grid {
+      grid-template-columns: 1fr;
+    }
+  }

@@ -1,0 +1,56 @@
+.rewards-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .rewards-container h1 {
+    color: #2E7D32;
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtitle {
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+  }
+  
+  .badges-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  
+  .rewards-info {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .rewards-info h2 {
+    color: #2E7D32;
+    margin-bottom: 1rem;
+  }
+  
+  .rewards-info ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .rewards-info li {
+    padding: 0.5rem 0;
+    color: #666;
+    position: relative;
+    padding-left: 1.5rem;
+  }
+  
+  .rewards-info li:before {
+    content: "•";
+    color: #4CAF50;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
