@@ -4,10 +4,20 @@ import { Link } from "react-router-dom"
 import { Button } from "@/components/ui/button"
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Leaf, BookOpen, Trophy, Wallet, Menu } from "lucide-react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import "@/js/wallet.js"
 
 export default function LandingPage() {
   const [menuOpen, setMenuOpen] = useState(false)
+
+  useEffect(() => {
+    const buttons = document.querySelectorAll("button")
+    buttons.forEach(button => {
+      if (button.textContent.toLowerCase().includes("connect wallet")) {
+        button.classList.add("connectWallet")
+      }
+    })
+  }, [])
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100">
